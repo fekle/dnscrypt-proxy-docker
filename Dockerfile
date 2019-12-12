@@ -1,6 +1,6 @@
 FROM alpine:3 as build
 
-# get dnscrypt binary from github releases
+# get dnscrypt binary from github releases (see https://github.com/DNSCrypt/dnscrypt-proxy/releases)
 ARG DNSCRYPT_PROXY_VERSION
 ARG DNSCRYPT_PROXY_ARCH
 RUN wget -O- -q "https://github.com/DNSCrypt/dnscrypt-proxy/releases/download/${DNSCRYPT_PROXY_VERSION}/dnscrypt-proxy-${DNSCRYPT_PROXY_ARCH}-${DNSCRYPT_PROXY_VERSION}.tar.gz" \

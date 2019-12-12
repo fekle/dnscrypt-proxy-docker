@@ -1,5 +1,5 @@
 # dnscrypt-proxy-docker
-DNSCrypt Proxy in Docker
+[dnscrypt-proxy](https://github.com/DNSCrypt/dnscrypt-proxy) in docker
 
 ## building
 see `cli.sh`
