@@ -14,15 +14,27 @@ function build() {
     --opt "build-arg:DNSCRYPT_PROXY_VERSION=${DNSCRYPT_PROXY_VERSION}"
 }
 
+function arch_check() {
+  arch="$(uname -p)"
+  if [[ ${arch} != "${1}" ]]; then
+    echo "wrong architecture. required: ${1}, current: ${arch}"
+    exit 1
+  fi
+}
+
 case "${1:-}" in
 build-x86)
   TAG_SUFFIX=""
   DNSCRYPT_PROXY_ARCH=linux_x86_64
+
+  arch_check x86_64
   build
   ;;
 build-rpi)
   TAG_SUFFIX="-rpi"
   DNSCRYPT_PROXY_ARCH=linux_arm64
+
+  arch_check aarch64
   build
   ;;
 build | build-all)
