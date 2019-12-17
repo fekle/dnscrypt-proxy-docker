@@ -38,8 +38,9 @@ load_blacklists() {
 }
 
 # autoconfigure if no custom config was mounted
-if [ -f /etc/dnscrypt-proxy/.gen ]; then
-  # copy config if missing
+if [ ! -f /etc/dnscrypt-proxy/dnscrypt-proxy.toml ] || [ -f /etc/dnscrypt-proxy/.gen ]; then
+  # copy config
+  touch /etc/dnscrypt-proxy/.gen
   cp -p /opt/dnscrypt-proxy/example-dnscrypt-proxy.toml /etc/dnscrypt-proxy/dnscrypt-proxy.toml
 
   # set dnscrypt user
