@@ -16,8 +16,7 @@ FROM alpine:3
 
 # install dependencies, add dnscrypt user and group and create config dir
 RUN apk add --no-cache ca-certificates && \
-    addgroup -S -g 3000 dnscrypt && adduser -S -G dnscrypt -u 3000 dnscrypt && \
-    mkdir -p /etc/dnscrypt-proxy && chown -R 3000:3000 /etc/dnscrypt-proxy && touch /etc/dnscrypt-proxy/.gen
+    addgroup -S -g 3000 dnscrypt && adduser -S -G dnscrypt -u 3000 dnscrypt
 
 # copy simple-blacklist binary
 COPY --from=build /usr/local/bin/simple-blacklist /usr/local/bin/simple-blacklist
