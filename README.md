@@ -6,10 +6,14 @@
 
 see `cli.sh`
 
+## supported architectures
+- amd64
+- arm64
+- armv7
+
 ## tags
 
-- `latest, 2.x.x, 2` -> dnscrypt-proxy 2.0, x86
-- `latest-rpi, 2.x.x-rpi, 2-rpi` -> dnscrypt-proxy 2.0, arm64 (for raspberry pi)
+- `latest, 2.x.x, 2` -> dnscrypt-proxy 2.0
 
 ## usage
 
