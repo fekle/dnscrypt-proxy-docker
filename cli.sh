@@ -8,7 +8,7 @@ cd "$(dirname "${0}")"
 IMAGE_REF="fekle/dnscrypt-proxy"
 
 # dnscrypt proxy version (see https://github.com/DNSCrypt/dnscrypt-proxy/releases)
-DNSCRYPT_PROXY_VERSION=2.0.35
+DNSCRYPT_PROXY_VERSION=2.0.44
 DNSCRYPT_PROXY_SHORT_VERSION=2
 
 # simple-blacklist version
